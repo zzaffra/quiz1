@@ -238,18 +238,28 @@ body {
     gap: 15px;
   }
 
-  .hometown-text h1 {
-    font-size: 2rem;
-  }
-
-  .hometown-text p {
-    font-size: 1rem;
-  }
-
-  .food-img,
-  .tourist-img {
+  .tourist-img,
+  .food-img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
