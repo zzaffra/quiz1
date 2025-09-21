@@ -11,7 +11,11 @@
   <style>
     body {
       background-color: #001a3d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f8f9fa;
+      margin: 0;
     }
+
     .tourist-img {
       width: 266px;
       height: 200px;
@@ -20,14 +24,44 @@
       border: 2px solid #fff;
       flex-shrink: 0;
     }
+
     .card-body {
       padding: 0;
     }
+
     .card-title {
       margin-bottom: 4px;
     }
+
     .card-text {
       margin-bottom: 0;
+    }
+
+    @media (max-width: 576px) {
+      .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+
+      .tourist-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .card-body {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+
+      .card-text {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
