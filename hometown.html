@@ -16,16 +16,11 @@
     .hometown-hero {
       position: relative;
       width: 100%;
-      min-height: 100vh;
       background-image: url('images/surabaya.jpg'); /* Ganti sesuai path kamu */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      text-align: center;
+      padding: 80px 20px;
     }
 
     .overlay {
@@ -42,14 +37,16 @@
       position: relative;
       z-index: 2;
       max-width: 800px;
+      margin: 0 auto;
       padding: 30px;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      text-align: center;
     }
 
     .hometown-text h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       text-shadow: 0 0 10px #00ffff;
       margin-bottom: 20px;
     }
@@ -61,9 +58,7 @@
 
     @media (max-width: 576px) {
       .hometown-hero {
-        padding: 40px 15px;
-        min-height: auto;
-        flex-direction: column;
+        padding: 60px 15px;
       }
 
       .hometown-text {
