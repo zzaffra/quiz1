@@ -181,7 +181,7 @@ body {
   object-fit: cover;        
   border-radius: 10px;
   border: 2px solid #fff;
-  display: block
+  display: block;
   margin-left: auto;
 }
 
@@ -193,4 +193,63 @@ body {
   border: 2px solid #fff;
   display: block;
   flex-shrink: 0;            
+}
+
+@media (max-width: 576px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+
+  .name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .bio {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .menu-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .menu-btn {
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hometown-text h1 {
+    font-size: 2rem;
+  }
+
+  .hometown-text p {
+    font-size: 1rem;
+  }
+
+  .food-img,
+  .tourist-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
