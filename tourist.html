@@ -8,62 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js" defer></script>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    body {
-      background-color: #001a3d;
-      font-family: 'Segoe UI', sans-serif;
-      color: #f8f9fa;
-      margin: 0;
-    }
-
-    .tourist-img {
-      width: 266px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid #fff;
-      flex-shrink: 0;
-    }
-
-    .card-body {
-      padding: 0;
-    }
-
-    .card-title {
-      margin-bottom: 4px;
-    }
-
-    .card-text {
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 576px) {
-      .d-flex {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-
-      .tourist-img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-      }
-
-      .card-body {
-        text-align: center;
-        padding: 10px;
-      }
-
-      .card-title {
-        font-size: 1.2rem;
-      }
-
-      .card-text {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  
 </head>
 <body>
   <div class="container mt-5">
@@ -102,5 +47,27 @@
       </div>
     </div>
   </div>
+
+<script>
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    setInterval(() => {
+      const newColor = getRandomColor();
+      document.body.classList.add("glow");
+      document.body.style.backgroundColor = newColor;
+
+      setTimeout(() => {
+        document.body.classList.remove("glow");
+      }, 500);
+    }, 3000);
+  </script>
+
 </body>
 </html>
