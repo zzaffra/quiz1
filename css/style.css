@@ -11,8 +11,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 1s ease;
 }
 
+#bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  transition: background-color 1s ease;
+}
+
+@font-face {
+  font-family: 'Aqua';
+  src: url('fonts/Aqua-Regular.ttf') format('truetype');
+}
+
+/* === PROFILE SECTION === */
 .profile-container {
   text-align: center;
   display: flex;
@@ -29,11 +47,6 @@ body {
   border: 4px solid #fff;
   box-shadow: 0 0 10px rgba(255,255,255,0.3);
   margin-bottom: 20px;
-}
-
-@font-face {
-  font-family: 'Aqua';
-  src: url('fonts/Aqua-Regular.ttf') format('truetype'); /* Make sure the font file is in fonts/ folder */
 }
 
 .name {
@@ -55,11 +68,12 @@ body {
   margin: 0 auto 30px;
 }
 
+/* === SOCIAL LINKS === */
 .social-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Jarak antar ikon */
+  gap: 20px;
   margin-top: 20px;
 }
 
@@ -83,6 +97,7 @@ body {
   transform: scale(1.1);
 }
 
+/* === MENU BUTTONS === */
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -99,13 +114,12 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* efek timbul */
-  border: 2px solid #fff; /* box putih */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border: 2px solid #fff;
   transition: all 0.3s ease;
 }
 
 .menu-btn:hover {
-  background-color: #cc00d3;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(255, 159, 255, 0.6);
 }
@@ -115,6 +129,7 @@ body {
   box-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 
+/* === NAV LINK FLASH === */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -130,11 +145,12 @@ body {
   left: 100%;
 }
 
+/* === HOMETOWN SECTION === */
 .hometown-hero {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('../images/surabaya.jpg'); 
+  background-image: url('../images/surabaya.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,7 +168,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -173,12 +189,12 @@ body {
   line-height: 1.6;
 }
 
+/* === IMAGE STYLES === */
 .food-img {
-  width: 100%;  
+  width: 100%;
   max-width: 200px;
-  height: auto;            
-  aspect-ratio: 4 / 3;      
-  object-fit: cover;        
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 10px;
   border: 2px solid #fff;
   display: block;
@@ -187,14 +203,15 @@ body {
 
 .tourist-img {
   width: 150px;
-  height: 112.5px;           
+  height: 112.5px;
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid #fff;
   display: block;
-  flex-shrink: 0;            
+  flex-shrink: 0;
 }
 
+/* === RESPONSIVE === */
 @media (max-width: 576px) {
   body {
     flex-direction: column;
@@ -204,21 +221,30 @@ body {
     justify-content: flex-start;
   }
 
-  .profile-img {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 15px;
+  .tourist-img,
+  .food-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
-  .name {
-    font-size: 2rem;
+  .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .card-body {
+    padding: 10px;
     text-align: center;
   }
 
-  .bio {
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
     font-size: 1rem;
-    padding: 0 10px;
-    text-align: center;
   }
 
   .menu-buttons {
@@ -231,35 +257,5 @@ body {
     width: 100%;
     max-width: 250px;
     font-size: 0.95rem;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .tourist-img,
-  .food-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .card-body {
-    padding: 10px;
-  }
-
-  .card-title {
-    font-size: 1.2rem;
-  }
-
-  .card-text {
-    font-size: 1rem;
-  }
-
-  .d-flex {
-    flex-direction: column !important;
-    align-items: center !important;
   }
 }
